@@ -1,0 +1,61 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.liaodq.pgyerUploadPlugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>PgyerUploadPlugin</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="liaodq@poweroak.net" url="https://www.poweroak.com">liaodq</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    # APK包上传到蒲公英
+
+    ## Setting
+    未设置时上传将弹窗设置
+
+    `Setting->Tools->UploadApkToPGY Settings`设置`API KEY`和`PATH`
+    选择`选择文件夹，自动找到最新的APK`,上传`PATH`路径文件夹内最新APK
+
+    ## 上传
+    1. 在Editor区域右键点击UploadApkToPGY上传
+    2. 在Project区域选择APK包右键=>Refactor=>UploadApkToPGY上传
+
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+        <applicationConfigurable parentId="tools" instance="com.liaodq.pgyeruploadplugin.AppSettingsConfigurable"
+                                 id="org.intellij.sdk.settings.AppSettingsConfigurable"
+                                 displayName="UploadApkToPGY Settings"/>
+        <applicationService serviceImplementation="com.liaodq.pgyeruploadplugin.AppSettingsState"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="UploadApkToPgy"
+                class="com.liaodq.pgyeruploadplugin.RefactorAction"
+                text="UploadApkToPGY"
+                description="上传apk到蒲公英">
+            <add-to-group group-id="RefactoringMenu" anchor="first"/>
+        </action>
+        <action id="uploadPopupMenuAction"
+                class="com.liaodq.pgyeruploadplugin.PopupMenuAction"
+                text="UploadApkToPGY"
+                description="上传apk到蒲公英">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
