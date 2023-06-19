@@ -16,9 +16,6 @@ import com.intellij.openapi.ui.Messages
  */
 class PopupMenuAction : AnAction() {
 
-    override fun getActionUpdateThread(): ActionUpdateThread {
-        return super.getActionUpdateThread()
-    }
 
     override fun actionPerformed(anActionEvent: AnActionEvent) {
         val project = anActionEvent.getData(PlatformDataKeys.PROJECT)
