@@ -5,28 +5,38 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>PgyerUploadPlugin</name>
+    <name>UploadApkToPGY</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="liaodq@poweroak.net" url="https://www.poweroak.com">liaodq</vendor>
+    <vendor email="liaodq0112@gmail.net" url="https://www.poweroak.com">liaodq</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    # APK包上传到蒲公英
+    <h1> APK包上传到蒲公英 </h1>
 
-    ## Setting
-    未设置时上传将弹窗设置
-
-    `Setting->Tools->UploadApkToPGY Settings`设置`API KEY`和`PATH`
-    选择`选择文件夹，自动找到最新的APK`,上传`PATH`路径文件夹内最新APK
-
-    ## 上传
-    1. 在Editor区域右键点击UploadApkToPGY上传
-    2. 在Project区域选择APK包右键=>Refactor=>UploadApkToPGY上传
-
+    <h2> Setting </h2>
+        <ul>
+            <li><b>1</b> 如未设置，将在上传时弹窗设置</li>
+            <li><b>2</b> <i>Setting->Tools->UploadApkToPGY Settings</i>设置<i>API KEY</i>和<i>PATH</i>，选择<i>选择文件夹，自动找到最新的APK</i>,上传<i>PATH</i>路径文件夹内最新APK</li>
+        </ul>
+    <h2> 上传 </h2>
+        <ul>
+            <li><b>1</b> 在Editor区域右键点击UploadApkToPGY上传</li>
+            <li><b>2</b> 在Project区域选择APK包右键=>Refactor=>UploadApkToPGY上传</li>
+        </ul>
   ]]></description>
+
+    <change-notes>
+        <![CDATA[
+      <ul>
+        <li><b>1.0.3</b> LOGO</li>
+        <li><b>1.0.2</b> 一些兼容性修复</li>
+        <li><b>1.0.1</b> 发布apk上传至蒲公英的idea插件</li>
+      </ul>
+    ]]>
+    </change-notes>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

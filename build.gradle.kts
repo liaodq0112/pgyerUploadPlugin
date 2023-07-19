@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.liaodq"
-version = "1.0.1"
+version = "1.0.3"
 
 repositories {
   mavenCentral()
