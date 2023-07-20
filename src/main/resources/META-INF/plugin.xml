@@ -8,7 +8,7 @@
     <name>UploadApkToPGY</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="liaodq0112@gmail.net" url="https://www.poweroak.com">liaodq</vendor>
+    <vendor email="liaodq0112@gmail.net" url="https://github.com/liaodq0112">liaodq</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
