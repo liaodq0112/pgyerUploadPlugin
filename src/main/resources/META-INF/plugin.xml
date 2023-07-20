@@ -14,6 +14,19 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
+    <h1>upload APK to pgyer.com </h1>
+
+    <h2> Setting </h2>
+        <ul>
+            <li><b>1</b> If not set, a popup window will be displayed when uploading</li>
+            <li><b>2</b> <i>Setting->Tools->UploadApkToPGY Settings</i>  set<i>API KEY</i>和<i>PATH</i>，select<i>选择文件夹，自动找到最新的APK</i>, upload the latest APK in the <i>PATH</i> folder</li>
+        </ul>
+    <h2> Upload </h2>
+        <ul>
+            <li><b>1</b> In Editor, right click menu=>UploadApkToPGY</li>
+            <li><b>2</b> In Project, select APK file and right click menu=>Refactor=>UploadApkToPGY</li>
+        </ul>
+
     <h1> APK包上传到蒲公英 </h1>
 
     <h2> Setting </h2>
